@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SleepRecordController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +38,15 @@ Route::middleware(['auth'])->group(function () {
     // 睡眠時間更新ルート
     Route::put('/profile/sleep', [ProfileController::class, 'updateSleepTime'])->name('profile.sleep.update');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/sleep', [SleepRecordController::class, 'index'])->name('sleep.index');
+    Route::get('/sleep/create', [SleepRecordController::class, 'create'])->name('sleep.create');
+    Route::post('/sleep', [SleepRecordController::class, 'store'])->name('sleep.store');
+});
+
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth'])
+    ->name('dashboard');
 
 require __DIR__.'/auth.php';
