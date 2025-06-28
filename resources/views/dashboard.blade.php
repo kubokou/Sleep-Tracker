@@ -61,6 +61,14 @@
         </div>
     </div>
 
+    {{-- カレンダーボタン --}}
+    <div class="flex justify-center">
+        <a href="{{ route('calendar') }}">
+            <x-primary-button>カレンダー</x-primary-button>
+        </a>
+    </div>
+
+
     {{-- Chart.js CDN --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

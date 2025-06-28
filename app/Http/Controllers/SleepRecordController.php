@@ -34,4 +34,16 @@ class SleepRecordController extends Controller
 
         return redirect()->route('sleep.index')->with('success', '睡眠記録を保存しました');
     }
+
+    public function getByDate(Request $request)
+    {
+        $date = $request->query('date');
+
+        $record = SleepRecord::where('user_id', Auth::id())
+            ->where('date', $date)
+            ->first();
+
+        return response()->json($record);
+    }
+
 }

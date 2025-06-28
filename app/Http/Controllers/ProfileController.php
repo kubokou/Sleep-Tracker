@@ -58,17 +58,4 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
 
-    public function updateSleepTime(Request $request)
-    {
-    $request->validate([
-        'sleep_time' => 'nullable|date_format:H:i',
-    ]);
-
-    $user = auth()->user();
-    $user->sleep_time = $request->sleep_time;
-    $user->save();
-
-    return back()->with('status', '睡眠時間を保存しました！');
-    }
-
 }

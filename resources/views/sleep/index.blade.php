@@ -71,5 +71,12 @@
             </form>
         </div>
 
+        {{-- カレンダーボタン --}}
+        <div class="mt-6 flex justify-center">
+            <a href="{{ route('calendar') }}">
+                <x-primary-button>カレンダー</x-primary-button>
+            </a>
+        </div>
+
     </div>
 </x-app-layout>
