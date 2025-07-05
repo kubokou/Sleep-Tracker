@@ -6,6 +6,7 @@ use App\Http\Controllers\SleepRecordController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,9 +47,7 @@ Route::middleware('auth')->group(function () {
 // カレンダーページ
 Route::get('/calendar', [EventController::class, 'show'])->name('calendar');
 
-Route::get('/sleep/by-date', [SleepRecordController::class, 'getByDate'])
-    ->middleware('auth')
-    ->name('sleep.by-date');
+Route::post('/calendar/create', [EventController::class, 'create'])->name("create");
 
-
+Route::post('/calendar/get',  [EventController::class, 'get'])->name("get"); // DBに登録した予定を取得
 require __DIR__.'/auth.php';
