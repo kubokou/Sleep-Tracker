@@ -46,4 +46,15 @@ class SleepRecordController extends Controller
         return response()->json($record);
     }
 
+    public function showByDate($date)
+{
+    $user = Auth::user();
+    $records = $user->sleepRecords()->whereDate('date', $date)->get();
+
+    return view('sleep.by_date', [
+        'date' => $date,
+        'records' => $records,
+    ]);
+}
+
 }

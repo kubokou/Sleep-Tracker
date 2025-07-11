@@ -28,9 +28,11 @@ if (!window.fullCalendarInitialized) {
             plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
             initialView: "dayGridMonth",
             events: events[0],
-            eventClick: (e)=>{
-                window.location.href = "/dashboard";
-	    },
+            eventClick: (e) => {
+                const clickedDate = e.event.startStr.split('T')[0]; // YYYY-MM-DD形式を取得
+                window.location.href = `/sleep/${clickedDate}`;
+            },
+
             headerToolbar: {
                 start: "prev,next today",
                 center: "title",
@@ -42,4 +44,3 @@ if (!window.fullCalendarInitialized) {
         calendar.render();
     }
 }
-
