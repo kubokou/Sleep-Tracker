@@ -6,7 +6,6 @@ use App\Http\Controllers\SleepRecordController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,4 +49,19 @@ Route::get('/calendar', [EventController::class, 'show'])->name('calendar');
 Route::post('/calendar/create', [EventController::class, 'create'])->name("create");
 
 Route::post('/calendar/get',  [EventController::class, 'get'])->name("get"); // DBに登録した予定を取得
+
+Route::get('/sleep/{date}', [SleepRecordController::class, 'showByDate'])->name('sleep.showByDate');
+
+// ✅ 円グラフページ：SleepRecordController で処理
+// 円グラフページ（GET：初期表示）
+Route::get('/pie_chart', [SleepRecordController::class, 'pieChart'])
+    ->middleware(['auth'])
+    ->name('pie_chart');
+
+// 円グラフページ（POST：年月フィルター）
+Route::post('/pie_chart', [SleepRecordController::class, 'filterChart'])
+    ->middleware(['auth'])
+    ->name('pie_chart.filter');
+
+    
 require __DIR__.'/auth.php';
