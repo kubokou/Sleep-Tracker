@@ -61,12 +61,23 @@
         </div>
     </div>
 
-    {{-- カレンダーボタン --}}
-    <div class="flex justify-center">
+    {{-- カレンダー ＋ 月ごとの記録ボタン --}}
+    <div class="flex justify-center space-x-4 mt-6">
+        <!-- カレンダーに移動するボタン -->
         <a href="{{ route('calendar') }}">
-            <x-primary-button>カレンダー</x-primary-button>
+            <x-primary-button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2">
+                カレンダー
+            </x-primary-button>
+        </a>
+
+        <!-- 月ごとの記録ページに移動するボタン -->
+        <a href="{{ route('pie_chart') }}">
+            <x-primary-button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2">
+                月ごとの記録
+            </x-primary-button>
         </a>
     </div>
+
 
 
     {{-- Chart.js CDN --}}
