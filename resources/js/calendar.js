@@ -42,6 +42,5 @@ if (!window.fullCalendarInitialized) {
         });
 
         calendar.render();
-    }
+   }
 }
-
