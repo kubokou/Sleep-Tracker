@@ -46,6 +46,7 @@ class SleepRecordController extends Controller
 
         return response()->json($record);
     }
+
     public function showByDate($date)
     {
         $user = Auth::user();
