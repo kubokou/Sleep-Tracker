@@ -42,9 +42,5 @@ if (!window.fullCalendarInitialized) {
         });
 
         calendar.render();
-<<<<<<< HEAD
     }
-=======
-   }
->>>>>>> 6ecd257d6ae03af5aba1c59ff6bb8af2324f15a4
 }
