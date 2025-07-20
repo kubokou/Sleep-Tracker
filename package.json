@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "heroku-postbuild": "npm run build"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.2",
@@ -21,10 +22,5 @@
         "@fullcalendar/interaction": "^6.1.17",
         "@fullcalendar/timegrid": "^6.1.17",
         "fullcalendar": "^6.1.17"
-    },
-     "scripts": {
-        "dev": "vite",
-        "build": "vite build", 
-        "heroku-postbuild": "npm run build"
     }
 }
