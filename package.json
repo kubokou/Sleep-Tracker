@@ -21,5 +21,10 @@
         "@fullcalendar/interaction": "^6.1.17",
         "@fullcalendar/timegrid": "^6.1.17",
         "fullcalendar": "^6.1.17"
+    },
+     "scripts": {
+        "dev": "vite",
+        "build": "vite build", 
+        "heroku-postbuild": "npm run build"
     }
 }

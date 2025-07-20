@@ -34,8 +34,4 @@ Route::post('/calendar/create', [EventController::class, 'create'])->name("creat
 Route::post('/calendar/get', [EventController::class, 'get'])->name("get");
 Route::get('/sleep/{date}', [SleepRecordController::class, 'showByDate'])->name('sleep.showByDate');
 
-<<<<<<< HEAD
 require __DIR__.'/auth.php';
-=======
-require __DIR__.'/auth.php';
->>>>>>> 6ecd257d6ae03af5aba1c59ff6bb8af2324f15a4
