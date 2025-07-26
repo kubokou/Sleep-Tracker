@@ -1,0 +1,4 @@
+<div class="mb-6">
+    <img src="{{ asset('images/welcome.png') }}" alt="Welcome Image" class="mx-auto w-48 h-auto">
+    https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG5tJgvQ5e0zR1JPjBnSOg6u0o-oAEopDfLn5Y_N3oVi2cpUowXIlLzO1yH60HbW2BH3uSc6ZqXkzoN2GVRd7LFQ3I_3djQDRZHTj5PuRl-Qw1M0lwHwTI7X7dT0S6L8X-6wB2P6J-ZTkPRPbLztpNUqYogesQP_aXyb8MQ21jl1ay4iZTldufLUyozbcCsSNUXQ5MvEf0XBjEQjyHwNNmngp2Nv4DDN2qBE5H8xKf-M9PtPqLQYj_K5Lgj3Lc3G3EKshHaUck4YFHfRp7htU0U8=/8930cfc0252ec84181dc84fe3279b39a.png?errorImage=false
+</div>

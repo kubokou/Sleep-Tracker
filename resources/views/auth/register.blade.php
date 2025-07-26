@@ -39,12 +39,6 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <!-- Sleep Time -->
-        <div class="mt-4">
-            <x-input-label for="sleep_time" :value="__('睡眠時間（例: 23:00）')" />
-            <x-text-input id="sleep_time" class="block mt-1 w-full" type="time" name="sleep_time" :value="old('sleep_time')" />
-            <x-input-error :messages="$errors->get('sleep_time')" class="mt-2" />
-        </div>
 
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
